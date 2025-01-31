@@ -7,7 +7,12 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customPurple: "#C778DD",
+        customGrey: "#282C33"
+      },
+    },
   },
   plugins: [],
 } satisfies Config;
