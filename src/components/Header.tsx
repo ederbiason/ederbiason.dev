@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { CgMenuGridO } from "react-icons/cg"
-import { FaAngleDown, FaAt, FaBook, FaFolder, FaGlobe, FaHome, FaMoon, FaSun, FaTimes, FaUser } from "react-icons/fa"
+import { FaAngleDown, FaAt, FaBook, FaEnvelope, FaFolder, FaGithub, FaGlobe, FaHome, FaLinkedin, FaMoon, FaSun, FaTimes, FaUser } from "react-icons/fa"
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
@@ -26,6 +26,22 @@ export function Header() {
     return (
         <header className="bg-customGray fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full">
             <nav className="mx-4 md:mx-10 lg:mx-20 xl:mx-44 md:pt-8 md:pb-2 py-4 flex items-center justify-between md:text-sm lg:text-base">
+                <div className="absolute md:left-2 top-0 lg:left-6 md:flex md:flex-col items-center hidden">
+                    <div className="h-64 w-[1px] bg-gray-400"></div>
+
+                    <div className="mt-3 flex flex-col gap-3 text-gray-400">
+                        <Link href="https://www.linkedin.com/in/eder-biason-b0a7b920b/" target="_blank">
+                            <FaLinkedin size={24} className="hover:text-white cursor-pointer" />
+                        </Link>
+                        <Link href="https://github.com/ederbiason" target="_blank">
+                            <FaGithub size={24} className="hover:text-white cursor-pointer" />
+                        </Link>
+                        <Link href="mailto:ederbiason.eh@hotmail.com">
+                            <FaEnvelope size={24} className="hover:text-white cursor-pointer" />
+                        </Link>
+                    </div>
+                </div>
+
                 <Link href="#" className="text-white text-bold text-sm md:text-base lg:text-lg">
                     <span className="text-customPurple">&#60;</span>Eder Biason <span className="text-customPurple">/&#62;</span>
                 </Link>
@@ -34,7 +50,7 @@ export function Header() {
                     className={`fixed md:static md:w-fit bottom-0 left-0 bg-zinc-800 rounded-t-3xl text-gray-400 w-full h-fit flex flex-col p-6 pb-3 transform transition-transform ${isMenuOpen ? "translate-y-0" : "translate-y-full md:translate-y-0"
                         } md:bottom-auto md:left-auto md:flex md:items-center md:bg-transparent md:p-0`}
                 >
-                    <ul className="grid grid-cols-3 px-10 py-5 justify-items-center md:flex md:px-0 md:py-0 gap-14 md:gap-5">
+                    <ul className="grid grid-cols-3 px-10 py-5 justify-items-center md:flex md:px-0 md:py-0 gap-14 md:gap-5 lg:gap-10">
                         {menuItems.map((item) => (
                             <li key={item.href} className="flex items-center gap-2">
                                 <Link
