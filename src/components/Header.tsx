@@ -24,7 +24,7 @@ export function Header() {
     ]
 
     return (
-        <header className="bg-customGray fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full">
+        <header className="bg-customGray fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full z-50">
             <nav className="mx-4 md:mx-10 lg:mx-20 xl:mx-44 md:pt-8 md:pb-2 py-4 flex items-center justify-between md:text-sm lg:text-base">
                 <div className="absolute md:left-2 top-0 lg:left-6 md:flex md:flex-col items-center hidden">
                     <div className="h-64 w-[1px] bg-gray-400"></div>
