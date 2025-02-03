@@ -8,7 +8,7 @@ import Link from "next/link"
 export function Home() {
     return (
         <section
-            className="text-white flex flex-col md:flex-row items-center gap-8"
+            className="text-white flex flex-col md:flex-row items-center gap-8 justify-between"
             id="home"
         >
             <div className="flex flex-col gap-5">
@@ -25,7 +25,7 @@ export function Home() {
                 </p>
 
                 <Link
-                    href="#contato"
+                    href="#contact"
                     className="mt-3 flex w-fit gap-2 py-2 px-5 border border-customPurple items-center font-semibold group hover:bg-customPurple hover:bg-opacity-20"
                 >
                     Contato
@@ -38,7 +38,7 @@ export function Home() {
                     src={HomeImage}
                     width={650}
                     height={400}
-                    alt=""
+                    alt="Pessoa de capuz e boné"
                     className="border-b border-customPurple z-10"
                 />
 
@@ -46,7 +46,7 @@ export function Home() {
                     src={DecorationImage}
                     width={128}
                     height={128}
-                    alt=""
+                    alt="Decoração"
                     className="absolute left-0 top-20 lg:w-52 lg:h-52"
                 />
 
@@ -54,7 +54,7 @@ export function Home() {
                     src={DotsImage}
                     width={100}
                     height={50}
-                    alt=""
+                    alt="Decoração"
                     className="absolute z-20 right-10 bottom-24 w-28 h-16 lg:w-40 lg:h-28"
                 />
 

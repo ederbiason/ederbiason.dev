@@ -1,3 +1,4 @@
+import { About } from "@/components/About"
 import { Header } from "@/components/Header"
 import { Home } from "@/components/Home"
 
@@ -8,6 +9,7 @@ export default function Page() {
 
       <main className="my-16 md:my-28">
         <Home />
+        <About />
       </main>
 
     </div>
