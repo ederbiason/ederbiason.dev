@@ -33,7 +33,7 @@ export function About() {
             </div>
 
             <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
-                <div className="flex-1 md:max-w-[50%] text-justify flex flex-col gap-5 text-gray-400 mt-8 md:mt-0">
+                <div className="flex-1 md:max-w-[50%] text-justify flex flex-col gap-5 text-gray-400 mt-8 lg:mt-0">
                     <p>
                         Sou <span className="text-customPurple">desenvolvedor frontend</span> com experiência na criação de sites modernos, integração com backends e bancos de dados não relacionais. Gosto de explorar o <span className="text-customPurple">desenvolvimento backend, mobile</span> e soluções em nuvem. Estudo <span className="text-customPurple">Engenharia de Software</span> na UniFil e busco sempre aprimorar minhas habilidades.
                     </p>
