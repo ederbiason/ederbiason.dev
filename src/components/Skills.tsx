@@ -4,7 +4,7 @@ import { FaAngular, FaAws, FaDatabase, FaDocker, FaGithub, FaJava, FaLinux, FaRe
 import { IoLogoFirebase } from "react-icons/io5"
 import { PiBracketsCurly } from "react-icons/pi"
 import { RiNextjsFill } from "react-icons/ri"
-import { SiCss3, SiExpress, SiFlask, SiGit, SiGradle, SiHtml5, SiJavascript, SiMongodb, SiNestjs, SiNodedotjs, SiOracle, SiPostgresql, SiPrisma, SiPython, SiSpringboot, SiSqlite, SiTailwindcss, SiTypescript } from "react-icons/si"
+import { SiCss3, SiExpress, SiFlask, SiGit, SiGradle, SiHtml5, SiJavascript, SiMongodb, SiNestjs, SiNodedotjs, SiOracle, SiPostgresql, SiPrisma, SiPython, SiSpringboot, SiSqlite, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si"
 import { TbCloudDataConnection } from "react-icons/tb"
 
 interface Skill {
@@ -43,6 +43,7 @@ const createSkillsData: SkillCategory[] = [
             { name: "Express.js", icon: <SiExpress /> },
             { name: "Node.js", icon: <SiNodedotjs /> },
             { name: "Prisma", icon: <SiPrisma /> },
+            { name: "Zod", icon: <SiZod /> },
             { name: "React Native", icon: <FaReact /> },
             { name: "Flask", icon: <SiFlask /> },
             { name: "Angular", icon: <FaAngular /> },
@@ -78,7 +79,7 @@ const createSkillsData: SkillCategory[] = [
 
 export function Skills() {
     return (
-        <section id="skills" className="mt-12 md:mt-24">
+        <section id="skills" className="mt-12 md:mt-32">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-5">
                     <h1 className="font-medium text-4xl text-white">

@@ -74,10 +74,6 @@ export function About() {
                     <HiOutlineDownload size={20} className="transition-all duration-300 group-hover:translate-y-1" />
                 </a>
             </div>
-
-            <div className="mt-10 flex justify-center">
-                
-            </div>
         </section>
     )
 }

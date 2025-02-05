@@ -1,6 +1,7 @@
 import { About } from "@/components/About"
 import { Header } from "@/components/Header"
 import { Home } from "@/components/Home"
+import { Portfolio } from "@/components/Portfolio"
 import { Skills } from "@/components/Skills"
 
 export default function Page() {
@@ -12,6 +13,7 @@ export default function Page() {
         <Home />
         <About />
         <Skills />
+        <Portfolio />
       </main>
 
     </div>
