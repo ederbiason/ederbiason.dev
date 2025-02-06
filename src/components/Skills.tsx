@@ -100,7 +100,7 @@ export function Skills() {
                     createSkillsData.map((skillData, index) => (
                         <div
                             key={index}
-                            className={`p-8 border border-gray-400 flex flex-col gap-5 ${index === 0 || index === 1 ? "col-span-2" : ""}`}
+                            className={`p-8 border bg-gray-400 bg-opacity-20 border-gray-400 flex flex-col gap-5 ${index === 0 || index === 1 ? "col-span-2" : ""}`}
                         >
                             <div className="text-3xl font-semibold text-customPurple flex items-center gap-5">
                                 {skillData.icon}
