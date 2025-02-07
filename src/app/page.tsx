@@ -1,5 +1,6 @@
 import { About } from "@/components/About"
 import { Contact } from "@/components/Contact"
+import { Qualification } from "@/components/Qualification"
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { Home } from "@/components/Home"
@@ -15,6 +16,7 @@ export default function Page() {
         <Home />
         <About />
         <Skills />
+        <Qualification />
         <Portfolio />
         <Contact />
       </main>
