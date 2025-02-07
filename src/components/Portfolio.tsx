@@ -163,7 +163,7 @@ export function Portfolio() {
                                         alt={`Foto do projeto - ${project.title}`}
                                         width={300}
                                         height={100}
-                                        className="border-b-2 border-gray-400 w-full h-full md:h-[320px] object-cover"
+                                        className="border-b-2 border-gray-400 w-full h-full md:max-h-[270px] 2xl:min-h-[380px] object-cover"
                                     />
 
                                     <div className="px-5 py-3 flex flex-wrap gap-3 bg-customGray">
