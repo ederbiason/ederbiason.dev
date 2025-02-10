@@ -17,6 +17,10 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    react: {
+      transSupportBasicHtmlNodes: true,
+      transWrapTextNodes: 'span',
+    }
   })
 
 export default i18n

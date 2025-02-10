@@ -4,13 +4,12 @@
         "about": "sobre",
         "skills": "habilidades",
         "portfolio": "portfólio",
-        "contact": "contato",
-        "language": "idioma"
+        "contact": "contato"
     },
     "home": {
         "title": "Eder Biason",
         "subtitle": "Desenvolvedor Front-End",
-        "social": "Estudante de Ciência da Computação apaixonado por tecnologia e programação.",
+        "social": "Estudante de <1>Engenharia de Software</1> apaixonado por tecnologia e programação.",
         "contact": "Contato",
         "imageTitle": "Aberto para novas oportunidades",
         "quoteMessage": "With great power comes great electricity bill",
