@@ -1,0 +1,31 @@
+{
+    "header": {
+        "home": "home",
+        "about": "about",
+        "skills": "skills",
+        "portfolio": "portfolio",
+        "contact": "contact",
+        "language": "language"
+    },
+    "home": {
+
+    },
+    "about": {
+
+    },
+    "skills": {
+
+    },
+    "qualification": {
+
+    },
+    "portfolio": {
+
+    },
+    "contact": {
+
+    },
+    "footer": {
+
+    }
+}

@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useTranslation } from "react-i18next"
 import { CgMenuGridO } from "react-icons/cg"
 import { FaAngleDown, FaAt, FaBook, FaEnvelope, FaFolder, FaGithub, FaGlobe, FaHome, FaLinkedin, FaMoon, FaSun, FaTimes, FaUser } from "react-icons/fa"
 
@@ -10,17 +11,32 @@ export function Header() {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(true)
     const [isLangMenuOpen, setIsLangMenuOpen] = useState<boolean>(false)
     const [activeSection, setActiveSection] = useState<string>("#home")
+    const [activeLanguage, setActiveLanguage] = useState<string | null>("")
+
+    const { i18n } = useTranslation()
+
+    useEffect(() => {
+        setActiveLanguage(localStorage.getItem("language"))
+    }, [i18n.language])
+    
+    const changeLanguage = (lng: "en" | "pt") => {
+        i18n.changeLanguage(lng)
+        localStorage.setItem("language", lng)
+        setIsLangMenuOpen(false)
+    }
+
+    const { t } = useTranslation()
 
     const menuItems = [
-        { href: "#home", icon: <FaHome />, text: "início" },
-        { href: "#about", icon: <FaUser />, text: "sobre" },
-        { href: "#skills", icon: <FaBook />, text: "habilidades" },
+        { href: "#home", icon: <FaHome />, text: t("header.home") },
+        { href: "#about", icon: <FaUser />, text: t("header.about") },
+        { href: "#skills", icon: <FaBook />, text: t("header.skills") },
         {
             href: "#portfolio",
             icon: <FaFolder />,
-            text: "portfólio",
+            text: t("header.portfolio"),
         },
-        { href: "#contact", icon: <FaAt />, text: "contato" },
+        { href: "#contact", icon: <FaAt />, text: t("header.contact") },
     ]
 
     return (
@@ -84,7 +100,7 @@ export function Header() {
                                 <FaGlobe className="md:hidden" />
                                 <p className="md:flex">
                                     <span className="hidden md:block text-customPurple">#</span>
-                                    idiomas
+                                    {activeLanguage === "pt" ? "idiomas" : "languages" }
                                 </p>
                                 <FaAngleDown className="hidden md:block" />
                             </button>
@@ -95,15 +111,15 @@ export function Header() {
                                 >
                                     <button
                                         className="block w-full px-4 py-2 hover:bg-zinc-600"
-                                        onClick={() => console.log("Português")}
+                                        onClick={() => changeLanguage("pt")}
                                     >
-                                        Português
+                                        {activeLanguage === "pt" ? "Português" : "Portuguese" }
                                     </button>
                                     <button
                                         className="block w-full px-4 py-2 hover:bg-zinc-600"
-                                        onClick={() => console.log("English")}
+                                        onClick={() => changeLanguage("en")}
                                     >
-                                        English
+                                        {activeLanguage === "pt" ? "Inglês" : "English" }
                                     </button>
                                 </div>
                             )}

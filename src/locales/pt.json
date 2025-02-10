@@ -1,0 +1,37 @@
+{
+    "header": {
+        "home": "início",
+        "about": "sobre",
+        "skills": "habilidades",
+        "portfolio": "portfólio",
+        "contact": "contato",
+        "language": "idioma"
+    },
+    "home": {
+        "title": "Eder Biason",
+        "subtitle": "Desenvolvedor Front-End",
+        "social": "Estudante de Ciência da Computação apaixonado por tecnologia e programação.",
+        "contact": "Contato",
+        "imageTitle": "Aberto para novas oportunidades",
+        "quoteMessage": "With great power comes great electricity bill",
+        "quoteAutor": "- Dr. Who"
+    },
+    "about": {
+
+    },
+    "skills": {
+
+    },
+    "qualification": {
+
+    },
+    "portfolio": {
+
+    },
+    "contact": {
+
+    },
+    "footer": {
+        
+    }
+}
