@@ -18,7 +18,7 @@ export function Header() {
     useEffect(() => {
         setActiveLanguage(localStorage.getItem("language"))
     }, [i18n.language])
-    
+
     const changeLanguage = (lng: "en" | "pt") => {
         i18n.changeLanguage(lng)
         localStorage.setItem("language", lng)
@@ -26,6 +26,29 @@ export function Header() {
     }
 
     const { t } = useTranslation()
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll("section[id]")
+            const scrollY = window.scrollY
+
+            sections.forEach((section) => {
+                const sectionHeight = (section as HTMLElement).offsetHeight
+                const sectionTop = (section as HTMLElement).offsetTop - 50
+                const sectionId = section.getAttribute("id") || ""
+
+                if (
+                    scrollY > sectionTop &&
+                    scrollY <= sectionTop + sectionHeight
+                ) {
+                    setActiveSection(sectionId)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     const menuItems = [
         { href: "#home", icon: <FaHome />, text: t("header.home") },
@@ -71,13 +94,12 @@ export function Header() {
                             <li key={item.href} className="flex items-center gap-2">
                                 <Link
                                     href={item.href}
-                                    className={`flex flex-col md:flex-row items-center gap-2 transition-colors ${activeSection === item.href
+                                    className={`flex flex-col md:flex-row items-center gap-2 transition-colors ${activeSection === item.href.slice(1)
                                         ? "font-bold text-white"
                                         : "hover:text-white"
                                         }`}
                                     onClick={() => {
                                         setIsMenuOpen(false)
-                                        setActiveSection(item.href)
                                     }}
                                 >
                                     <div className="md:hidden">
@@ -100,7 +122,7 @@ export function Header() {
                                 <FaGlobe className="md:hidden" />
                                 <p className="md:flex">
                                     <span className="hidden md:block text-customPurple">#</span>
-                                    {activeLanguage === "pt" ? "idiomas" : "languages" }
+                                    {activeLanguage === "pt" ? "idiomas" : "languages"}
                                 </p>
                                 <FaAngleDown className="hidden md:block" />
                             </button>
@@ -110,16 +132,16 @@ export function Header() {
                                     onMouseLeave={() => setIsLangMenuOpen(false)}
                                 >
                                     <button
-                                        className="block w-full px-4 py-2 hover:bg-zinc-600"
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "pt" && "text-white"}`}
                                         onClick={() => changeLanguage("pt")}
                                     >
-                                        {activeLanguage === "pt" ? "Português" : "Portuguese" }
+                                        {activeLanguage === "pt" ? "Português" : "Portuguese"}
                                     </button>
                                     <button
-                                        className="block w-full px-4 py-2 hover:bg-zinc-600"
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "en" && "text-white"}`}
                                         onClick={() => changeLanguage("en")}
                                     >
-                                        {activeLanguage === "pt" ? "Inglês" : "English" }
+                                        {activeLanguage === "pt" ? "Inglês" : "English"}
                                     </button>
                                 </div>
                             )}

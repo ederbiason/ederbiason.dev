@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth scroll-pt-5 md:scroll-pt-28">
       <body className={preahvihear.className}>
         <I18nProvider>
           {children}
