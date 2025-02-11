@@ -1,22 +1,14 @@
-import Image from "next/image";
+"use client"
+
+import Image from "next/image"
 import Developer from "../../public/images/developer.png"
-import { HiOutlineDownload } from "react-icons/hi";
+import { HiOutlineDownload } from "react-icons/hi"
+import { Trans, useTranslation } from "react-i18next"
 
 export function About() {
-    const careerInfo = [
-        {
-            value: "1 ano",
-            text: "de experiência na área"
-        },
-        {
-            value: "50+",
-            text: "repositórios no GitHub"
-        },
-        {
-            value: "01",
-            text: "empresa trabalhada"
-        }
-    ]
+    const { t } = useTranslation()
+
+    const careerInfo = t("about.careerInfo", { returnObjects: true }) as { value: string; text: string }[]
 
     return (
         <section
@@ -26,7 +18,7 @@ export function About() {
             <div className="flex items-center gap-5">
                 <h1 className="font-medium text-4xl text-white">
                     <span className="text-customPurple">#</span>
-                    sobre mim
+                    {t("about.title")}
                 </h1>
 
                 <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
@@ -35,10 +27,20 @@ export function About() {
             <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
                 <div className="flex-1 md:max-w-[50%] text-justify flex flex-col gap-5 text-gray-400 mt-8 lg:mt-0">
                     <p>
-                        Sou <span className="text-customPurple">desenvolvedor frontend</span> com experiência na criação de sites modernos, integração com backends e bancos de dados não relacionais. Gosto de explorar o <span className="text-customPurple">desenvolvimento backend, mobile</span> e soluções em nuvem. Estudo <span className="text-customPurple">Engenharia de Software</span> na UniFil e busco sempre aprimorar minhas habilidades.
+                        <Trans
+                            i18nKey="about.paragraph1"
+                            components={{
+                                1: <span className='text-customPurple' />
+                            }}
+                        />
                     </p>
                     <p>
-                        Gosto de combinar <span className="text-customPurple">tecnologia</span> e <span className="text-customPurple">criatividade</span> para construir soluções eficientes que resolvam problemas do dia a dia. Acredito na importância de <span className="text-customPurple">aprender continuamente</span> e colaborar com equipes para entregar <span className="text-customPurple">produtos de qualidade</span>.
+                        <Trans
+                            i18nKey="about.paragraph2"
+                            components={{
+                                1: <span className='text-customPurple' />
+                            }}
+                        />
                     </p>
                 </div>
 
@@ -65,12 +67,12 @@ export function About() {
                         </div>
                     ))
                 }
-                <a 
+                <a
                     className="mt-11 text-white font-semibold p-4 flex items-center gap-2 group border border-customPurple bg-opacity-40 bg-customPurple hover:bg-opacity-20 col-span-3 cursor-pointer"
-                    href="/pdf/Currículo Eder H Biason.pdf"
+                    href={t("about.resumePath")}
                     download
                 >
-                    Baixar currículo
+                    {t("about.resume")}
                     <HiOutlineDownload size={20} className="transition-all duration-300 group-hover:translate-y-1" />
                 </a>
             </div>

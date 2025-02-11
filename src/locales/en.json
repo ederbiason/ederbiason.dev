@@ -10,27 +10,35 @@
         "title": "Eder Biason",
         "subtitle": "Front-End Developer",
         "social": "<1>Software Engineering</1> student passionate about technology and programming.",
-        "contact": "Contatc",
+        "contact": "Contact",
         "imageTitle": "Open to new opportunities",
         "quoteMessage": "With great power comes great electricity bill",
         "quoteAutor": "- Dr. Who"
     },
     "about": {
-
+        "title": "about me",
+        "paragraph1": "I am a <1>frontend developer</1> with experience in creating modern websites, integrating with backends, and working with non-relational databases. I enjoy exploring <1>backend development, mobile</1>, and cloud solutions. I study <1>Software Engineering</1> at UniFil and always strive to improve my skills.",
+        "paragraph2": "I like to combine <1>technology</1> and <1>creativity</1> to build efficient solutions that solve everyday problems. I believe in the importance of <1>continuous learning</1> and collaborating with teams to deliver <1>quality products</1>.",
+        "careerInfo": [
+            {
+                "value": "1 year",
+                "text": "of experience in field"
+            },
+            {
+                "value": "50+",
+                "text": "repositories on GitHub"
+            },
+            {
+                "value": "01",
+                "text": "company worked at"
+            }
+        ],
+        "resumePath": "/pdf/Resume - Eder H Biason.pdf",
+        "resume": "Download resume"
     },
-    "skills": {
-
-    },
-    "qualification": {
-
-    },
-    "portfolio": {
-
-    },
-    "contact": {
-
-    },
-    "footer": {
-
-    }
+    "skills": {},
+    "qualification": {},
+    "portfolio": {},
+    "contact": {},
+    "footer": {}
 }

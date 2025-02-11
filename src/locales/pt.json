@@ -16,21 +16,29 @@
         "quoteAutor": "- Dr. Who"
     },
     "about": {
-
-    },
-    "skills": {
-
-    },
-    "qualification": {
-
-    },
-    "portfolio": {
-
-    },
-    "contact": {
-
-    },
-    "footer": {
-        
+        "title": "sobre mim",
+        "paragraph1": "Sou <1>desenvolvedor frontend</1> com experiência na criação de sites modernos, integração com backends e bancos de dados não relacionais. Gosto de explorar o <1>desenvolvimento backend, mobile</1> e soluções em nuvem. Estudo <1>Engenharia de Software</1> na UniFil e busco sempre aprimorar minhas habilidades.",
+        "paragraph2": "Gosto de combinar <1>tecnologia</1> e <1>criatividade</1> para construir soluções eficientes que resolvam problemas do dia a dia. Acredito na importância de <1>aprender continuamente</1> e colaborar com equipes para entregar <1>produtos de qualidade</1>.",
+        "careerInfo": [
+            {
+                "value": "1 ano",
+                "text": "de experiência na área"
+            },
+            {
+                "value": "50+",
+                "text": "repositórios no GitHub"
+            },
+            {
+                "value": "01",
+                "text": "empresa trabalhada"
+            }
+        ],
+        "resumePath": "/pdf/Currículo Eder H Biason.pdf",
+        "resume": "Baixar currículo"
+        },
+        "skills": {},
+        "qualification": {},
+        "portfolio": {},
+        "contact": {},
+        "footer": {}
     }
-}
