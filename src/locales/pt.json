@@ -35,10 +35,62 @@
         ],
         "resumePath": "/pdf/Currículo Eder H Biason.pdf",
         "resume": "Baixar currículo"
-        },
-        "skills": {},
-        "qualification": {},
-        "portfolio": {},
-        "contact": {},
-        "footer": {}
-    }
+    },
+    "skills": {
+        "title": "habilidades",
+        "subtitle": "Tecnologias com as quais já trabalhei ou tive contato no ambiente acadêmico ou projetos pessoais.",
+        "categories": [
+            {
+                "category": "Linguagens"
+            },
+            {
+                "category": "Tecnologias & Frameworks"
+            },
+            {
+                "category": "Banco de Dados"
+            },
+            {
+                "category": "DevOps & Cloud"
+            }
+        ]
+    },
+    "qualification": {
+        "title": "qualificação",
+        "subtitle": "Minha escolaridade e experiências de trabalho até o momento",
+        "tab": [
+            {
+                "title": "Educação"
+            },
+            {
+                "title": "Experiência"
+            }
+        ],
+        "education": [
+            {
+                "title": "Engenharia de Software",
+                "subtitle": "UniFil",
+                "dateRange": "Jul 2022 - Jul 2026"
+            },
+            {
+                "title": "Engenharia de Produção - Software",
+                "subtitle": "UEM",
+                "dateRange": "Jul 2021 - Mai 2022"
+            }
+        ],
+        "experiences": [
+            {
+                "title": "Estagiário Desenvolvedor",
+                "subtitle": "Junior Baby",
+                "dateRange": "Fev 2024 - Dez 2024"
+            },
+            {
+                "title": "Projeto de Extensão Curricular",
+                "subtitle": "UniFil",
+                "dateRange": "Jun 2023 - Jul 2024"
+            }
+        ]
+    },
+    "portfolio": {},
+    "contact": {},
+    "footer": {}
+}

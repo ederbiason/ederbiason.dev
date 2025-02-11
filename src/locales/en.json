@@ -36,8 +36,60 @@
         "resumePath": "/pdf/Resume - Eder H Biason.pdf",
         "resume": "Download resume"
     },
-    "skills": {},
-    "qualification": {},
+    "skills": {
+        "title": "skills",
+        "subtitle": "Technologies that I've worked with or had contact with in the academic environment or personal projects.",
+        "categories": [
+            {
+                "category": "Languages"
+            },
+            {
+                "category": "Technologies & Frameworks"
+            },
+            {
+                "category": "Databases"
+            },
+            {
+                "category": "DevOps & Cloud"
+            }
+        ]
+    },
+    "qualification": {
+        "title": "qualification",
+        "subtitle": "My education and work experience so far",
+        "tab": [
+            {
+                "title": "Education"
+            },
+            {
+                "title": "Experience"
+            }
+        ],
+        "education": [
+            {
+                "title": "Software Engineering",
+                "subtitle": "UniFil",
+                "dateRange": "Jul 2022 - Jul 2026"
+            },
+            {
+                "title": "Production Engineering - Software",
+                "subtitle": "UEM",
+                "dateRange": "Jul 2021 - May 2022"
+            }
+        ],
+        "experiences": [
+            {
+                "title": "Developer Intern",
+                "subtitle": "Junior Baby",
+                "dateRange": "Feb 2024 - Dec 2024"
+            },
+            {
+                "title": "Curricular Extension Project",
+                "subtitle": "UniFil",
+                "dateRange": "Jun 2023 - Jul 2024"
+            }
+        ]
+    },
     "portfolio": {},
     "contact": {},
     "footer": {}
