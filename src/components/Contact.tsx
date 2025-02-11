@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import contactImage from '/public/images/contact.png'
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa"
@@ -5,34 +7,39 @@ import { FaLocationDot } from "react-icons/fa6"
 import { ReactNode } from "react"
 import Link from "next/link"
 import { BiSend } from "react-icons/bi"
+import { useTranslation } from "react-i18next"
 
 interface ContactInfoProps {
-    icon: ReactNode
+    icon?: ReactNode
     field: string
     value: string
 }
 
-const contactInfos: ContactInfoProps[] = [
-    { icon: <FaPhoneAlt />, field: "Telefone (Celular)", value: "+55 (43) 9 9972-0073" },
-    { icon: <FaEnvelope />, field: "E-mail", value: "ederbiason.eh@hotmail.com" },
-    { icon: <FaLocationDot />, field: "Localização", value: "Arapongas, PR" }
-]
-
 export function Contact() {
+    const { t } = useTranslation()
+
+    const contact = t("contact.contactInfos", { returnObjects: true }) as ContactInfoProps[]
+
+    const contactInfos: ContactInfoProps[] = [
+        { icon: <FaPhoneAlt />, field: contact[0].field, value: contact[0].value },
+        { icon: <FaEnvelope />, field: contact[1].field, value: contact[1].value },
+        { icon: <FaLocationDot />, field: contact[2].field, value: contact[2].value }
+    ]
+
     return (
         <section id="contact" className="mt-12 md:mt-24">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-5">
                     <h1 className="font-medium text-4xl text-white">
                         <span className="text-customPurple">#</span>
-                        contato
+                        {t("contact.title")}
                     </h1>
 
                     <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
                 </div>
 
                 <p className="text-gray-400 text-justify">
-                    Entre em contato para conversarmos sobre oportunidades e projetos
+                    {t("contact.subtitle")}
                 </p>
             </div>
 
@@ -62,7 +69,7 @@ export function Contact() {
                             href="mailto:ederbiason.eh@hotmail.com"
                             className="mt-3 flex w-fit gap-2 p-5 text-white text-lg bg-customPurple bg-opacity-75 items-center font-bold group hover:bg-opacity-60"
                         >
-                            Entre em contato
+                            {t("contact.contactButton")}
                             <BiSend size={24} className="transition-all duration-300 group-hover:translate-x-1" />
                         </Link>
                     </div>

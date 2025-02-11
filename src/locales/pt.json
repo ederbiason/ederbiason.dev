@@ -9,7 +9,7 @@
     "home": {
         "title": "Eder Biason",
         "subtitle": "Desenvolvedor Front-End",
-        "social": "Estudante de <1>Engenharia de Software</1> apaixonado por tecnologia e programação.",
+        "social": "Estudante de <1>Engenharia de Software</1> apaixonado por tecnologia e programação",
         "contact": "Contato",
         "imageTitle": "Aberto para novas oportunidades",
         "quoteMessage": "With great power comes great electricity bill",
@@ -38,7 +38,7 @@
     },
     "skills": {
         "title": "habilidades",
-        "subtitle": "Tecnologias com as quais já trabalhei ou tive contato no ambiente acadêmico ou projetos pessoais.",
+        "subtitle": "Tecnologias com as quais já trabalhei ou tive contato no ambiente acadêmico ou projetos pessoais",
         "categories": [
             {
                 "category": "Linguagens"
@@ -99,7 +99,11 @@
                 "image": "/images/projects/poop-party.png",
                 "linkGithub": "https://github.com/ederbiason/poop-party",
                 "linkDeploy": "https://poop-party.vercel.app",
-                "tags": ["React", "MongoDB", "NestJS"],
+                "tags": [
+                    "React",
+                    "MongoDB",
+                    "NestJS"
+                ],
                 "modal": {
                     "title": "Poop Party",
                     "description": "Projeto inspirado em uma brincadeira entre amigos para contabilizar a quantidade de vezes que íamos ao banheiro durante um ano inteiro. Inicialmente, usávamos um grupo no WhatsApp, mas decidi automatizar esse processo enquanto aprendia NestJS na prática.",
@@ -115,7 +119,12 @@
                 "image": "/images/projects/ecommerce.png",
                 "linkGithub": "https://github.com/ederbiason/ecommerce-juniorbaby",
                 "linkDeploy": "",
-                "tags": ["NextJS", "React", "MongoDB", "Stripe"],
+                "tags": [
+                    "NextJS",
+                    "React",
+                    "MongoDB",
+                    "Stripe"
+                ],
                 "modal": {
                     "title": "E-commerce Junior Baby",
                     "description": "Projeto desenvolvido durante meu estágio obrigatório, onde criei um e-commerce do zero com pagamento via Stripe, integrado com um sistema de gerenciamento de estoque para administradores.",
@@ -131,7 +140,12 @@
                 "image": "/images/projects/saude-in-foco.png",
                 "linkGithub": "https://github.com/ederbiason/saude-in-foco",
                 "linkDeploy": "http://144.22.160.181:3000/",
-                "tags": ["React", "NodeJS", "AI API", "Leaflet"],
+                "tags": [
+                    "React",
+                    "NodeJS",
+                    "AI API",
+                    "Leaflet"
+                ],
                 "modal": {
                     "title": "Saúde in Foco",
                     "description": "Projeto de extensão curricular voltado para democratizar o acesso à informação de saúde para moradores de Londrina. Inclui notícias sobre saúde, um chatbot de pré-diagnóstico baseado em IA e um mapa interativo mostrando pontos de atendimento médico próximos, além de uma cartilha de doenças com informações de sintomas e tratamento.",
@@ -147,7 +161,12 @@
                 "image": "/images/projects/portfolio.png",
                 "linkGithub": "https://github.com/ederbiason/ederbiason.dev",
                 "linkDeploy": "",
-                "tags": ["NextJS", "React", "Tailwind", "SwiperJS"],
+                "tags": [
+                    "NextJS",
+                    "React",
+                    "Tailwind",
+                    "SwiperJS"
+                ],
                 "modal": {
                     "title": "Portfólio",
                     "description": "Meu portfólio pessoal para apresentar meus projetos, conhecimentos e trajetória profissional para recrutadores e demais interessados.",
@@ -161,7 +180,13 @@
                 "image": "/images/projects/videohelper.png",
                 "linkGithub": "https://github.com/ederbiason/ai-videohelper",
                 "linkDeploy": "",
-                "tags": ["NextJS", "React", "Fastify", "FFmpeg", "AI API"],
+                "tags": [
+                    "NextJS",
+                    "React",
+                    "Fastify",
+                    "FFmpeg",
+                    "AI API"
+                ],
                 "modal": {
                     "title": "AI VideoHelper",
                     "description": "Ferramenta que automatiza a criação de descrições e títulos para vídeos do YouTube a partir da transcrição do conteúdo do vídeo subido.",
@@ -173,6 +198,33 @@
             }
         ]
     },
-    "contact": {},
-    "footer": {}
+    "contact": {
+        "title": "contato",
+        "subtitle": "Entre em contato para conversarmos sobre oportunidades e projetos",
+        "contactInfos": [
+            {
+                "field": "Telefone (Celular)",
+                "value": "+55 (43) 9 9972-0073"
+            },
+            {
+                "field": "E-mail",
+                "value": "ederbiason.eh@hotmail.com"
+            },
+            {
+                "field": "Localização",
+                "value": "Arapongas, PR"
+            }
+        ],
+        "contactButton": "Entre em contato"
+    },
+    "footer": {
+        "subtitle": "Desenvolvedor Front-End",
+        "links": {
+            "home": "início",
+            "about": "sobre",
+            "portfolio": "portfólio",
+            "contact": "contato"
+        },
+        "copyright": "Todos os direitos reservados."
+    }
 }

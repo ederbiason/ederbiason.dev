@@ -1,14 +1,19 @@
+"use client"
+
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
-const footerOptions = [
-    { href: "#home", text: "início" },
-    { href: "#about", text: "sobre" },
-    { href: "#portfolio", text: "portfólio" },
-    { href: "#contact", text: "contato" },
-]
-
 export function Footer() {
+    const { t } = useTranslation()
+
+    const footerOptions = [
+        { href: "#home", text: t("footer.links.home") },
+        { href: "#about", text: t("footer.links.about") },
+        { href: "#portfolio", text: t("footer.links.portfolio") },
+        { href: "#contact", text: t("footer.links.contact") },
+    ]
+
     return (
         <footer className="border-t border-gray-400 bg-customGray pb-12 md:pb-0">
             <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-44 my-10 flex flex-col gap-8">
@@ -18,7 +23,7 @@ export function Footer() {
                             <span className="text-customPurple">&#60;</span>Eder Biason <span className="text-customPurple">/&#62;</span>
                         </p>
                         <p className="font-semibold text-customPurple">
-                            Desenvolvedor Front-End
+                            {t("footer.subtitle")}
                         </p>
                     </div>
 
@@ -47,7 +52,7 @@ export function Footer() {
 
                 <div className="flex items-center justify-center">
                     <p className="text-gray-400 font-semibold text-sm md:text-base">
-                        <span className="text-customPurple">&copy;</span> Eder Biason. Todos os direitos reservados. {new Date().getFullYear()}
+                        <span className="text-customPurple">&copy;</span> Eder Biason. {t("footer.copyright")} {new Date().getFullYear()}
                     </p>
                 </div>
             </div>

@@ -9,7 +9,7 @@
     "home": {
         "title": "Eder Biason",
         "subtitle": "Front-End Developer",
-        "social": "<1>Software Engineering</1> student passionate about technology and programming.",
+        "social": "<1>Software Engineering</1> student passionate about technology and programming",
         "contact": "Contact",
         "imageTitle": "Open to new opportunities",
         "quoteMessage": "With great power comes great electricity bill",
@@ -38,7 +38,7 @@
     },
     "skills": {
         "title": "skills",
-        "subtitle": "Technologies that I've worked with or had contact with in the academic environment or personal projects.",
+        "subtitle": "Technologies that I've worked with or had contact with in the academic environment or personal projects",
         "categories": [
             {
                 "category": "Languages"
@@ -198,6 +198,33 @@
             }
         ]
     },
-    "contact": {},
-    "footer": {}
+    "contact": {
+        "title": "contact",
+        "subtitle": "Get in touch to talk about opportunities and projects",
+        "contactInfos": [
+            {
+                "field": "Phone (Mobile)",
+                "value": "+55 (43) 9 9972-0073"
+            },
+            {
+                "field": "Email",
+                "value": "ederbiason.eh@hotmail.com"
+            },
+            {
+                "field": "Location",
+                "value": "Arapongas, PR"
+            }
+        ],
+        "contactButton": "Get in touch"
+    },
+    "footer": {
+        "subtitle": "Front-End Developer",
+        "links": {
+            "home": "home",
+            "about": "about",
+            "portfolio": "portfolio",
+            "contact": "contact"
+        },
+        "copyright": "All rights reserved."
+    }
 }
