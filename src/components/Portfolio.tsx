@@ -5,99 +5,33 @@ import { Autoplay, Navigation, EffectCoverflow } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/effect-coverflow"
-import { FaBriefcaseMedical, FaGithub, FaPoop, FaShoppingCart, FaUser } from "react-icons/fa"
+import { FaBriefcaseMedical, FaGithub, FaPoop, FaShoppingCart, FaUser, FaVideo } from "react-icons/fa"
 import Image from "next/image"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import Link from "next/link"
 import { RiShareBoxFill } from "react-icons/ri"
+import { useTranslation } from "react-i18next"
 
-const projects = [
-    {
-        title: "Poop Party",
-        image: "/images/projects/poop-party.png",
-        linkGithub: "https://github.com/ederbiason/poop-party",
-        linkDeploy: "https://poop-party.vercel.app",
-        icon: <FaPoop />,
-        tags: ["React", "MongoDB", "NestJS"],
-        modal: {
-            title: "Poop Party",
-            description: `Projeto inspirado em uma brincadeira entre amigos para contabilizar a quantidade de vezes que íamos ao banheiro durante um ano inteiro. Inicialmente, usávamos um grupo no WhatsApp, mas decidi automatizar esse processo enquanto aprendia NestJS na prática.`,
-            details: [
-                "Frontend: React, TypeScript, Tailwind, ShadcnUI",
-                "Backend: NestJS, MongoDB, Mongoose, JWT Authentication",
-                "Outras Tecnologias: ViteJS, Firebase, Zod, Deploy na Vercel"
-            ],
-        },
-    },
-    {
-        title: "E-commerce Junior Baby",
-        image: "/images/projects/ecommerce.png",
-        linkGithub: "https://github.com/ederbiason/ecommerce-juniorbaby",
-        linkDeploy: "",
-        icon: <FaShoppingCart />,
-        tags: ["NextJS", "React", "MongoDB", "Stripe"],
-        modal: {
-            title: "E-commerce Junior Baby",
-            description: `Projeto desenvolvido durante meu estágio obrigatório, onde criei um e-commerce do zero com pagamento via Stripe, integrado com um sistema de gerenciamento de estoque para administradores.`,
-            details: [
-                "Frontend: React, TypeScript, NextJS, Tailwind, ShadcnUI",
-                "Backend: NodeJS, MongoDB, Mongoose, JWT Authentication",
-                "Outras Tecnologias: Firebase, Stripe, React Redux, Zod"
-            ],
-        },
-    },
-    {
-        title: "Saúde in Foco",
-        image: "/images/projects/saude-in-foco.png",
-        linkGithub: "https://github.com/ederbiason/saude-in-foco",
-        linkDeploy: "http://144.22.160.181:3000/",
-        icon: <FaBriefcaseMedical />,
-        tags: ["React", "NodeJS", "AI API", "Leaflet"],
-        modal: {
-            title: "Saúde in Foco",
-            description: `Projeto de extensão curricular voltado para democratizar o acesso à informação de saúde para moradores de Londrina. Inclui notícias sobre saúde, um chatbot de pré-diagnóstico baseado em IA e um mapa interativo mostrando pontos de atendimento médico próximos, além de uma cartilha de doenças com informações de sintomas e tratamento.`,
-            details: [
-                "Frontend: Vite, React, TypeScript, Tailwind",
-                "Backend: NodeJS, Firebase, AI API",
-                "Mapas: Leaflet"
-            ],
-        },
-    },
-    {
-        title: "Portfólio",
-        image: "/images/projects/portfolio.png",
-        linkGithub: "https://github.com/ederbiason/ederbiason.dev",
-        linkDeploy: "",
-        icon: <FaUser />,
-        tags: ["NextJS", "React", "Tailwind", "SwiperJS"],
-        modal: {
-            title: "Portfólio",
-            description: `Meu portfólio pessoal para apresentar meus projetos, conhecimentos e trajetória profissional para recrutadores e demais interessados.`,
-            details: [
-                "Frontend: React, NextJS, Tailwind, SwiperJS",
-            ],
-        },
-    },
-    {
-        title: "AI VideoHelper",
-        image: "/images/projects/videohelper.png",
-        linkGithub: "https://github.com/ederbiason/ai-videohelper",
-        linkDeploy: "",
-        icon: <FaUser />,
-        tags: ["NextJS", "React", "Fastify", "FFmpeg", "AI API"],
-        modal: {
-            title: "AI VideoHelper",
-            description: `Ferramenta que automatiza a criação de descrições e títulos para vídeos do YouTube a partir da transcrição do conteúdo do vídeo subido.`,
-            details: [
-                "Frontend: React, NextJS, Tailwind, SwiperJS, ShadcnUI",
-                "Backend: Prisma, Fastify, Node.js, AI, Zod"
-            ],
-        },
+interface Project {
+    title: string
+    image: string
+    linkGithub: string
+    linkDeploy: string
+    tags: string[]
+    modal: {
+      title: string
+      description: string
+      details: string[]
     }
-]
+  }
 
 export function Portfolio() {
     const navSwiperButtonClass = "absolute -translate-x-1/2 -translate-y-1/2 top-1/2 text-4xl z-10 text-white text-opacity-70 flex items-center justify-between w-fit bg-customPurple p-1 bg-opacity-80 transition-all duration-300 hover:scale-125 hover:bg-opacity-100 rounded-lg cursor-pointer hover:text-opacity-100"
+
+    const { t } = useTranslation()
+
+    const projects = t("portfolio.projects", { returnObjects: true }) as Project[]
+    const projectIcons = [<FaPoop />, <FaShoppingCart />, <FaBriefcaseMedical />, <FaUser />, <FaVideo />]
 
     return (
         <section id="portfolio" className="mt-12 md:mt-32">
@@ -105,14 +39,14 @@ export function Portfolio() {
                 <div className="flex items-center gap-5">
                     <h1 className="font-medium text-4xl text-white">
                         <span className="text-customPurple">#</span>
-                        portfólio
+                        {t("portfolio.title")}
                     </h1>
 
                     <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
                 </div>
 
                 <p className="text-gray-400 text-justify">
-                    Projetos concluídos e detalhes sobre cada sistema
+                    {t("portfolio.subtitle")}
                 </p>
             </div>
 
@@ -184,7 +118,7 @@ export function Portfolio() {
                                     <div className="border-t-2 border-gray-400 p-5 bg-customGray flex flex-col gap-5">
                                         <div className="flex gap-3">
                                             <div className="text-customPurple text-2xl">
-                                                {project.icon}
+                                                {projectIcons[index]}
                                             </div>
                                             <h1 className="text-white font-semibold text-xl">
                                                 {project.title}

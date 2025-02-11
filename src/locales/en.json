@@ -90,7 +90,114 @@
             }
         ]
     },
-    "portfolio": {},
+    "portfolio": {
+        "title": "portfolio",
+        "subtitle": "Completed projects and details about each system",
+        "projects": [
+            {
+                "title": "Poop Party",
+                "image": "/images/projects/poop-party.png",
+                "linkGithub": "https://github.com/ederbiason/poop-party",
+                "linkDeploy": "https://poop-party.vercel.app",
+                "tags": [
+                    "React",
+                    "MongoDB",
+                    "NestJS"
+                ],
+                "modal": {
+                    "title": "Poop Party",
+                    "description": "Project inspired by a game among friends to count how many times we went to the bathroom throughout an entire year. Initially, we used a WhatsApp group, but I decided to automate this process while learning NestJS in practice.",
+                    "details": [
+                        "Frontend: React, TypeScript, Tailwind, ShadcnUI",
+                        "Backend: NestJS, MongoDB, Mongoose, JWT Authentication",
+                        "Other Technologies: ViteJS, Firebase, Zod, Deployed on Vercel"
+                    ]
+                }
+            },
+            {
+                "title": "Junior Baby E-commerce",
+                "image": "/images/projects/ecommerce.png",
+                "linkGithub": "https://github.com/ederbiason/ecommerce-juniorbaby",
+                "linkDeploy": "",
+                "tags": [
+                    "NextJS",
+                    "React",
+                    "MongoDB",
+                    "Stripe"
+                ],
+                "modal": {
+                    "title": "Junior Baby E-commerce",
+                    "description": "Project developed during my mandatory internship, where I created an e-commerce from scratch with Stripe payment, integrated with an inventory management system for administrators.",
+                    "details": [
+                        "Frontend: React, TypeScript, NextJS, Tailwind, ShadcnUI",
+                        "Backend: NodeJS, MongoDB, Mongoose, JWT Authentication",
+                        "Other Technologies: Firebase, Stripe, React Redux, Zod"
+                    ]
+                }
+            },
+            {
+                "title": "Saúde in Foco",
+                "image": "/images/projects/saude-in-foco.png",
+                "linkGithub": "https://github.com/ederbiason/saude-in-foco",
+                "linkDeploy": "http://144.22.160.181:3000/",
+                "tags": [
+                    "React",
+                    "NodeJS",
+                    "AI API",
+                    "Leaflet"
+                ],
+                "modal": {
+                    "title": "Saúde in Foco",
+                    "description": "Curricular extension project aimed at democratizing access to health information for Londrina residents. It includes health news, an AI-based pre-diagnosis chatbot, an interactive map showing nearby medical care points, and a disease guide with information on symptoms and treatments.",
+                    "details": [
+                        "Frontend: Vite, React, TypeScript, Tailwind",
+                        "Backend: NodeJS, Firebase, AI API",
+                        "Maps: Leaflet"
+                    ]
+                }
+            },
+            {
+                "title": "Portfolio",
+                "image": "/images/projects/portfolio.png",
+                "linkGithub": "https://github.com/ederbiason/ederbiason.dev",
+                "linkDeploy": "",
+                "tags": [
+                    "NextJS",
+                    "React",
+                    "Tailwind",
+                    "SwiperJS"
+                ],
+                "modal": {
+                    "title": "Portfolio",
+                    "description": "My personal portfolio to showcase my projects, knowledge, and professional journey to recruiters and other interested parties.",
+                    "details": [
+                        "Frontend: React, NextJS, Tailwind, SwiperJS"
+                    ]
+                }
+            },
+            {
+                "title": "AI VideoHelper",
+                "image": "/images/projects/videohelper.png",
+                "linkGithub": "https://github.com/ederbiason/ai-videohelper",
+                "linkDeploy": "",
+                "tags": [
+                    "NextJS",
+                    "React",
+                    "Fastify",
+                    "FFmpeg",
+                    "AI API"
+                ],
+                "modal": {
+                    "title": "AI VideoHelper",
+                    "description": "A tool that automates the creation of YouTube video descriptions and titles based on the transcription of the uploaded video content.",
+                    "details": [
+                        "Frontend: React, NextJS, Tailwind, SwiperJS, ShadcnUI",
+                        "Backend: Prisma, Fastify, Node.js, AI, Zod"
+                    ]
+                }
+            }
+        ]
+    },
     "contact": {},
     "footer": {}
 }
