@@ -90,7 +90,7 @@ export function Portfolio() {
                 >
                     {
                         projects.map((project, index) => (
-                            <SwiperSlide key={index}>
+                            <SwiperSlide key={`${project.title}-${index}`}>
                                 <div className="border-2 border-textColor cursor-pointer">
                                     <Image
                                         src={project.image}
