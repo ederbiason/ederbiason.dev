@@ -8,7 +8,7 @@ import { FaAngleDown, FaAt, FaBook, FaEnvelope, FaFolder, FaGithub, FaGlobe, FaH
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(true)
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
     const [isLangMenuOpen, setIsLangMenuOpen] = useState<boolean>(false)
     const [activeSection, setActiveSection] = useState<string>("#home")
     const [activeLanguage, setActiveLanguage] = useState<string | null>("")
@@ -62,31 +62,39 @@ export function Header() {
         { href: "#contact", icon: <FaAt />, text: t("header.contact") },
     ]
 
+    useEffect(() => {
+        const theme = localStorage.getItem("theme")
+        if (theme === "dark") {
+            document.body.classList.add("dark-theme")
+            setIsDarkMode(true)
+        }
+    }, [])
+
     return (
-        <header className="bg-customGray fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full z-50">
+        <header className="bg-background fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full z-50">
             <nav className="mx-4 md:mx-10 lg:mx-20 xl:mx-44 md:pt-8 md:pb-2 py-4 flex items-center justify-between md:text-sm lg:text-base">
                 <div className="absolute md:left-2 top-0 lg:left-6 md:flex md:flex-col items-center hidden">
-                    <div className="h-64 w-[1px] bg-gray-400"></div>
+                    <div className="h-64 w-[1px] bg-textColor"></div>
 
-                    <div className="mt-3 flex flex-col gap-3 text-gray-400">
+                    <div className="mt-3 flex flex-col gap-3 text-textColor">
                         <Link href="https://www.linkedin.com/in/eder-biason-b0a7b920b/" target="_blank">
-                            <FaLinkedin size={24} className="hover:text-white cursor-pointer" />
+                            <FaLinkedin size={24} className="hover:text-titleColor cursor-pointer" />
                         </Link>
                         <Link href="https://github.com/ederbiason" target="_blank">
-                            <FaGithub size={24} className="hover:text-white cursor-pointer" />
+                            <FaGithub size={24} className="hover:text-titleColor cursor-pointer" />
                         </Link>
                         <Link href="mailto:ederbiason.eh@hotmail.com">
-                            <FaEnvelope size={24} className="hover:text-white cursor-pointer" />
+                            <FaEnvelope size={24} className="hover:text-titleColor cursor-pointer" />
                         </Link>
                     </div>
                 </div>
 
-                <Link href="#" className="text-white text-bold text-sm md:text-base lg:text-lg">
+                <Link href="#" className="text-titleColor text-bold text-sm md:text-base lg:text-lg">
                     <span className="text-customPurple">&#60;</span>Eder Biason <span className="text-customPurple">/&#62;</span>
                 </Link>
 
                 <div
-                    className={`fixed md:static md:w-fit bottom-0 left-0 bg-zinc-800 rounded-t-3xl text-gray-400 w-full h-fit flex flex-col p-6 pb-3 transform transition-transform ${isMenuOpen ? "translate-y-0" : "translate-y-full md:translate-y-0"
+                    className={`fixed md:static md:w-fit bottom-0 left-0 bg-zinc-800 rounded-t-3xl text-textColor w-full h-fit flex flex-col p-6 pb-3 transform transition-transform ${isMenuOpen ? "translate-y-0" : "translate-y-full md:translate-y-0"
                         } md:bottom-auto md:left-auto md:flex md:items-center md:bg-transparent md:p-0`}
                 >
                     <ul className="grid grid-cols-3 px-10 py-5 justify-items-center md:flex md:px-0 md:py-0 gap-14 md:gap-5 lg:gap-10">
@@ -95,8 +103,8 @@ export function Header() {
                                 <Link
                                     href={item.href}
                                     className={`flex flex-col md:flex-row items-center gap-2 transition-colors ${activeSection === item.href.slice(1)
-                                        ? "font-bold text-white"
-                                        : "hover:text-white"
+                                        ? "font-bold text-titleColor"
+                                        : "hover:text-titleColor"
                                         }`}
                                     onClick={() => {
                                         setIsMenuOpen(false)
@@ -116,15 +124,15 @@ export function Header() {
                         {/* Languages */}
                         <div className="relative">
                             <button
-                                className="flex flex-col md:flex-row items-center gap-2"
+                                className="flex flex-col md:flex-row items-center gap-2 group"
                                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                             >
                                 <FaGlobe className="md:hidden" />
-                                <p className="md:flex">
+                                <p className="md:flex group-hover:text-titleColor">
                                     <span className="hidden md:block text-customPurple">#</span>
                                     {activeLanguage === "pt" ? "idiomas" : "languages"}
                                 </p>
-                                <FaAngleDown className="hidden md:block" />
+                                <FaAngleDown className="hidden md:block group-hover:text-titleColor" />
                             </button>
                             {isLangMenuOpen && (
                                 <div
@@ -132,13 +140,13 @@ export function Header() {
                                     onMouseLeave={() => setIsLangMenuOpen(false)}
                                 >
                                     <button
-                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "pt" && "text-white"}`}
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "pt" && "text-titleColor"}`}
                                         onClick={() => changeLanguage("pt")}
                                     >
                                         {activeLanguage === "pt" ? "Português" : "Portuguese"}
                                     </button>
                                     <button
-                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "en" && "text-white"}`}
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "en" && "text-titleColor"}`}
                                         onClick={() => changeLanguage("en")}
                                     >
                                         {activeLanguage === "pt" ? "Inglês" : "English"}
@@ -150,8 +158,13 @@ export function Header() {
                         <button
                             onClick={() => {
                                 setIsDarkMode(!isDarkMode)
+                                document.body.classList.toggle("dark-theme")
+                                localStorage.setItem(
+                                    "theme",
+                                    isDarkMode ? "light" : "dark"
+                                )
                             }}
-                            className="text-xl hidden md:block"
+                            className="text-xl hidden md:block hover:text-titleColor"
                         >
                             {isDarkMode ? <FaSun /> : <FaMoon />}
                         </button>
@@ -167,7 +180,7 @@ export function Header() {
                 </div>
 
                 {/* Toggle theme and menu buttons */}
-                <div className="flex items-center gap-5 text-white md:hidden">
+                <div className="flex items-center gap-5 text-titleColor md:hidden">
                     <button
                         onClick={() => {
                             setIsDarkMode(!isDarkMode)

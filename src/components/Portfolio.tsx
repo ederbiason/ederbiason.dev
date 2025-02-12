@@ -26,7 +26,7 @@ interface Project {
   }
 
 export function Portfolio() {
-    const navSwiperButtonClass = "absolute -translate-x-1/2 -translate-y-1/2 top-1/2 text-4xl z-10 text-white text-opacity-70 flex items-center justify-between w-fit bg-customPurple p-1 bg-opacity-80 transition-all duration-300 hover:scale-125 hover:bg-opacity-100 rounded-lg cursor-pointer hover:text-opacity-100"
+    const navSwiperButtonClass = "absolute -translate-x-1/2 -translate-y-1/2 top-1/2 text-4xl z-10 text-titleColor text-opacity-70 flex items-center justify-between w-fit bg-customPurple p-1 bg-opacity-80 transition-all duration-300 hover:scale-125 hover:bg-opacity-100 rounded-lg cursor-pointer hover:text-opacity-100"
 
     const { t } = useTranslation()
 
@@ -37,7 +37,7 @@ export function Portfolio() {
         <section id="portfolio" className="mt-12 md:mt-32">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-5">
-                    <h1 className="font-medium text-4xl text-white">
+                    <h1 className="font-medium text-4xl text-titleColor">
                         <span className="text-customPurple">#</span>
                         {t("portfolio.title")}
                     </h1>
@@ -45,7 +45,7 @@ export function Portfolio() {
                     <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
                 </div>
 
-                <p className="text-gray-400 text-justify">
+                <p className="text-textColor text-justify">
                     {t("portfolio.subtitle")}
                 </p>
             </div>
@@ -91,21 +91,21 @@ export function Portfolio() {
                     {
                         projects.map((project, index) => (
                             <SwiperSlide key={index}>
-                                <div className="border-2 border-gray-400 cursor-pointer">
+                                <div className="border-2 border-textColor cursor-pointer">
                                     <Image
                                         src={project.image}
                                         alt={`Foto do projeto - ${project.title}`}
                                         width={300}
                                         height={100}
-                                        className="border-b-2 border-gray-400 w-full h-full md:max-h-[270px] 2xl:min-h-[380px] object-cover"
+                                        className="border-b-2 border-textColor w-full h-full md:max-h-[270px] 2xl:min-h-[380px] object-cover"
                                     />
 
-                                    <div className="px-5 py-3 flex flex-wrap gap-3 bg-customGray">
+                                    <div className="px-5 py-3 flex flex-wrap gap-3 bg-background">
                                         {
                                             project.tags.map((tag, index) => (
                                                 <div
                                                     key={index}
-                                                    className="transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 text-white bg-customPurple bg-opacity-30 w-fit px-2 p-1 rounded-full font-medium hover:shadow-md hover:shadow-gray-500 hover:bg-opacity-60 cursor-pointer text-sm"
+                                                    className="transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 text-titleColor bg-customPurple bg-opacity-30 w-fit px-2 p-1 rounded-full font-medium hover:shadow-md hover:shadow-gray-500 hover:bg-opacity-60 cursor-pointer text-sm"
                                                 >
                                                     <span>
                                                         {tag}
@@ -115,12 +115,12 @@ export function Portfolio() {
                                         }
                                     </div>
 
-                                    <div className="border-t-2 border-gray-400 p-5 bg-customGray flex flex-col gap-5">
+                                    <div className="border-t-2 border-textColor p-5 bg-background flex flex-col gap-5">
                                         <div className="flex gap-3">
                                             <div className="text-customPurple text-2xl">
                                                 {projectIcons[index]}
                                             </div>
-                                            <h1 className="text-white font-semibold text-xl">
+                                            <h1 className="text-titleColor font-semibold text-xl">
                                                 {project.title}
                                             </h1>
                                         </div>
@@ -128,14 +128,14 @@ export function Portfolio() {
                                         <div className="flex gap-3">
                                             {
                                                 project.linkDeploy !== "" && (
-                                                    <Link href={project.linkDeploy} target="_black" className="px-3 py-2 border border-customPurple text-white font-semibold flex items-center gap-3 text-lg hover:bg-customPurple hover:bg-opacity-30 group">
+                                                    <Link href={project.linkDeploy} target="_black" className="px-3 py-2 border border-customPurple text-titleColor font-semibold flex items-center gap-3 text-lg hover:bg-customPurple hover:bg-opacity-30 group">
                                                         Live
                                                         <RiShareBoxFill className="transition-all duration-300 group-hover:-translate-y-1" />
                                                     </Link>
                                                 )
                                             }
 
-                                            <Link href={project.linkGithub} target="_black" className="px-3 py-2 border border-customPurple text-white font-semibold flex items-center gap-3 text-lg hover:bg-customPurple hover:bg-opacity-30 group">
+                                            <Link href={project.linkGithub} target="_black" className="px-3 py-2 border border-customPurple text-titleColor font-semibold flex items-center gap-3 text-lg hover:bg-customPurple hover:bg-opacity-30 group">
                                                 GitHub
                                                 <FaGithub className="transition-all duration-300 group-hover:-translate-y-1" />
                                             </Link>

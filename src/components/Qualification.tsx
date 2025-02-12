@@ -26,7 +26,7 @@ export function Qualification() {
         <section className="mt-12 md:mt-32">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-5">
-                    <h1 className="font-medium text-4xl text-white">
+                    <h1 className="font-medium text-4xl text-titleColor">
                         <span className="text-customPurple">#</span>
                         {t("qualification.title")}
                     </h1>
@@ -34,14 +34,14 @@ export function Qualification() {
                     <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
                 </div>
 
-                <p className="text-gray-400 text-justify">
+                <p className="text-textColor text-justify">
                     {t("qualification.subtitle")}
                 </p>
             </div>
 
             <div className="flex flex-col md:flex-row items-center md:items-start justify-center mt-8 gap-20">
                 <div className="w-full px-10 md:px-0 md:w-auto">
-                    <h1 className="text-white text-2xl mb-5 font-semibold">
+                    <h1 className="text-titleColor text-2xl mb-5 font-semibold">
                         <span className="text-customPurple">#</span>
                         {tabs[0].title}
                     </h1>
@@ -54,13 +54,13 @@ export function Qualification() {
                                 <div key={index} className="border border-customPurple hover:bg-customPurple hover:bg-opacity-20 p-5 relative">
                                     <div className="w-5 h-5 rounded-full bg-customPurple animate-bounce absolute -top-1 -left-[31px]"></div>
                                     <div>
-                                        <h2 className="text-white font-semibold text-lg">
+                                        <h2 className="text-titleColor font-semibold text-lg">
                                             {education.title}
                                         </h2>
                                         <p className="text-customPurple">
                                             {education.subtitle}
                                         </p>
-                                        <p className="text-gray-400">
+                                        <p className="text-textColor">
                                             {education.dateRange}
                                         </p>
                                     </div>
@@ -71,7 +71,7 @@ export function Qualification() {
                 </div>
 
                 <div className="w-full px-10 md:px-0 md:w-auto">
-                    <h1 className="text-white text-2xl mb-5 font-semibold">
+                    <h1 className="text-titleColor text-2xl mb-5 font-semibold">
                         <span className="text-customPurple">#</span>
                         {tabs[1].title}
                     </h1>
@@ -83,13 +83,13 @@ export function Qualification() {
                             {experiences.map((experience, index) => (
                                 <div key={index} className="border border-customPurple hover:bg-customPurple hover:bg-opacity-20 p-5 relative">
                                     <div className="w-5 h-5 animate-bounce rounded-full bg-customPurple absolute -top-1 -left-[31px]"></div>
-                                    <h2 className="text-white font-semibold text-lg">
+                                    <h2 className="text-titleColor font-semibold text-lg">
                                         {experience.title}
                                     </h2>
                                     <p className="text-customPurple">
                                         {experience.subtitle}
                                     </p>
-                                    <p className="text-gray-400">
+                                    <p className="text-textColor">
                                         {experience.dateRange}
                                     </p>
                                 </div>

@@ -16,7 +16,7 @@ export function About() {
             className="mt-20 md:mt-32"
         >
             <div className="flex items-center gap-5">
-                <h1 className="font-medium text-4xl text-white">
+                <h1 className="font-medium text-4xl text-titleColor">
                     <span className="text-customPurple">#</span>
                     {t("about.title")}
                 </h1>
@@ -25,7 +25,7 @@ export function About() {
             </div>
 
             <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
-                <div className="flex-1 md:max-w-[50%] text-justify flex flex-col gap-5 text-gray-400 mt-8 lg:mt-0">
+                <div className="flex-1 md:max-w-[50%] text-justify flex flex-col gap-5 text-textColor mt-8 lg:mt-0">
                     <p>
                         <Trans
                             i18nKey="about.paragraph1"
@@ -56,19 +56,19 @@ export function About() {
             <div className="grid grid-cols-3 justify-items-center mt-10">
                 {
                     careerInfo.map((info, index) => (
-                        <div key={index} className="flex flex-col items-center justify-center gap-1 border p-3 border-gray-400 hover:bg-gray-400 hover:bg-opacity-20">
-                            <p className="text-2xl font-bold text-white">
+                        <div key={index} className="flex flex-col items-center justify-center gap-1 border p-3 border-textColor hover:bg-gray-400 hover:bg-opacity-20">
+                            <p className="text-2xl font-bold text-titleColor">
                                 {info.value}
                             </p>
 
-                            <p className="text-center text-gray-400">
+                            <p className="text-center text-textColor">
                                 {info.text}
                             </p>
                         </div>
                     ))
                 }
                 <a
-                    className="mt-11 text-white font-semibold p-4 flex items-center gap-2 group border border-customPurple bg-opacity-40 bg-customPurple hover:bg-opacity-20 col-span-3 cursor-pointer"
+                    className="mt-11 text-titleColor font-semibold p-4 flex items-center gap-2 group border border-customPurple bg-opacity-40 bg-customPurple hover:bg-opacity-20 col-span-3 cursor-pointer"
                     href={t("about.resumePath")}
                     download
                 >

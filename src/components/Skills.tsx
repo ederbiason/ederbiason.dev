@@ -89,7 +89,7 @@ export function Skills() {
         <section id="skills" className="mt-12 md:mt-32">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-5">
-                    <h1 className="font-medium text-4xl text-white">
+                    <h1 className="font-medium text-4xl text-titleColor">
                         <span className="text-customPurple">#</span>
                         {t("skills.title")}
                     </h1>
@@ -97,7 +97,7 @@ export function Skills() {
                     <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
                 </div>
 
-                <p className="text-gray-400 text-justify">
+                <p className="text-textColor text-justify">
                     {t("skills.subtitle")}
                 </p>
             </div>
@@ -107,12 +107,12 @@ export function Skills() {
                     createSkillsData.map((skillData, index) => (
                         <div
                             key={index}
-                            className={`p-8 border bg-gray-400 bg-opacity-20 border-gray-400 flex flex-col gap-5 ${index === 0 || index === 1 ? "col-span-2" : ""}`}
+                            className={`p-8 border bg-gray-400 bg-opacity-20 border-textColor flex flex-col gap-5 ${index === 0 || index === 1 ? "col-span-2" : ""}`}
                         >
                             <div className="text-3xl font-semibold text-customPurple flex items-center gap-5">
                                 {skillData.icon}
 
-                                <h1 className="text-2xl text-white">
+                                <h1 className="text-2xl text-titleColor">
                                     {skillData.category}
                                 </h1>
                             </div>
@@ -122,7 +122,7 @@ export function Skills() {
                                     skillData.skills.map((skill, index) => (
                                         <div
                                             key={index}
-                                            className="transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 text-white bg-customPurple bg-opacity-70 w-fit px-4 p-2 rounded-full font-medium hover:shadow-md hover:shadow-gray-500 hover:bg-opacity-60 cursor-pointer"
+                                            className="transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 text-titleColor bg-customPurple bg-opacity-70 w-fit px-4 p-2 rounded-full font-medium hover:shadow-md hover:shadow-gray-500 hover:bg-opacity-60 cursor-pointer"
                                         >
                                             <span>
                                                 {skill.icon}

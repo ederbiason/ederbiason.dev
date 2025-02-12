@@ -10,7 +10,10 @@ export default {
     extend: {
       colors: {
         customPurple: "#C778DD",
-        customGray: "#282C33"
+        "background": "var(--background)",
+        "titleColor": "var(--text-title)",
+        "textColor": "var(--text-color)",
+        "borderColor": "var(--border-color)",
       },
     },
   },

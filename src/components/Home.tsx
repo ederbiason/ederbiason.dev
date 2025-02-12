@@ -17,7 +17,7 @@ export function Home() {
             className="flex flex-col gap-12"
             id="home"
         >
-            <div className="text-white flex flex-col md:flex-row items-center gap-8 justify-between">
+            <div className="text-titleColor flex flex-col md:flex-row items-center gap-8 justify-between">
                 <div className="flex flex-col gap-5">
                     <h1 className="font-semibold text-4xl">
                         {t("home.title")}
@@ -27,7 +27,7 @@ export function Home() {
                         {t("home.subtitle")}
                     </p>
 
-                    <p className="text-gray-400 teste">
+                    <p className="text-textColor teste">
                         <Trans
                             i18nKey="home.social"
                             components={{
@@ -70,9 +70,9 @@ export function Home() {
                         className="absolute z-20 right-10 bottom-24 w-28 h-16 lg:w-40 lg:h-28"
                     />
 
-                    <div className="border border-gray-400 border-t-transparent flex items-center p-2 gap-3 w-fit">
+                    <div className="border border-textColor border-t-transparent flex items-center p-2 gap-3 w-fit">
                         <div className="w-4 h-4 border border-customPurple bg-customPurple bg-opacity-20" />
-                        <p className="text-gray-400">
+                        <p className="text-textColor">
                             {t("home.imageTitle")}
                         </p>
                     </div>
@@ -80,17 +80,17 @@ export function Home() {
             </div>
 
             <div className="flex items-center justify-center">
-                <div className="flex flex-col items-end text-white text-xl">
-                    <div className="p-6 border border-gray-400 font-bold relative">
+                <div className="flex flex-col items-end text-titleColor text-xl">
+                    <div className="p-6 border border-textColor font-bold relative">
                         <p>
                             {t("home.quoteMessage")}
                         </p>
 
-                        <FaQuoteLeft className="absolute -top-2.5 left-4 bg-customGray" />
-                        <FaQuoteRight className="absolute -bottom-2.5 right-4 bg-customGray" />
+                        <FaQuoteLeft className="absolute -top-2.5 left-4 bg-background" />
+                        <FaQuoteRight className="absolute -bottom-2.5 right-4 bg-background" />
                     </div>
 
-                    <div className="p-3 border border-gray-400 border-t-0 font-semibold">
+                    <div className="p-3 border border-textColor border-t-0 font-semibold">
                         {t("home.quoteAutor")}
                     </div>
                 </div>

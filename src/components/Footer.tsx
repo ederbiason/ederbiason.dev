@@ -15,11 +15,11 @@ export function Footer() {
     ]
 
     return (
-        <footer className="border-t border-gray-400 bg-customGray pb-12 md:pb-0">
-            <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-44 my-10 flex flex-col gap-8">
+        <footer className="border-t border-textColor bg-background pb-12 md:pb-0">
+            <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-44 py-10 flex flex-col gap-8">
                 <div className="flex flex-col md:flex-row items-start md:justify-between gap-8 md:gap-0">
                     <div>
-                        <p className="text-white font-bold text-2xl">
+                        <p className="text-titleColor font-bold text-2xl">
                             <span className="text-customPurple">&#60;</span>Eder Biason <span className="text-customPurple">/&#62;</span>
                         </p>
                         <p className="font-semibold text-customPurple">
@@ -32,7 +32,7 @@ export function Footer() {
                             footerOptions.map((option, index) => (
                                 <Link key={index} href={option.href} className="flex items-center">
                                     <span className=" text-customPurple">#</span>
-                                    <p className="text-gray-400 hover:text-white">
+                                    <p className="text-textColor hover:text-titleColor">
                                         {option.text}
                                     </p>
                                 </Link> 
@@ -40,18 +40,18 @@ export function Footer() {
                         }
                     </div>
 
-                    <div className="flex gap-3 text-gray-400">
+                    <div className="flex gap-3 text-textColor">
                         <Link href="https://www.linkedin.com/in/eder-biason-b0a7b920b/" target="_blank">
-                            <FaLinkedin size={24} className="hover:text-white cursor-pointer" />
+                            <FaLinkedin size={24} className="hover:text-titleColor cursor-pointer" />
                         </Link>
                         <Link href="https://github.com/ederbiason" target="_blank">
-                            <FaGithub size={24} className="hover:text-white cursor-pointer" />
+                            <FaGithub size={24} className="hover:text-titleColor cursor-pointer" />
                         </Link>
                     </div>
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <p className="text-gray-400 font-semibold text-sm md:text-base">
+                    <p className="text-textColor font-semibold text-sm md:text-base">
                         <span className="text-customPurple">&copy;</span> Eder Biason. {t("footer.copyright")} {new Date().getFullYear()}
                     </p>
                 </div>

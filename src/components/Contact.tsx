@@ -30,7 +30,7 @@ export function Contact() {
         <section id="contact" className="mt-12 md:mt-24">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-5">
-                    <h1 className="font-medium text-4xl text-white">
+                    <h1 className="font-medium text-4xl text-titleColor">
                         <span className="text-customPurple">#</span>
                         {t("contact.title")}
                     </h1>
@@ -38,13 +38,13 @@ export function Contact() {
                     <div className="h-[2px] w-24 md:w-72 bg-customPurple"></div>
                 </div>
 
-                <p className="text-gray-400 text-justify">
+                <p className="text-textColor text-justify">
                     {t("contact.subtitle")}
                 </p>
             </div>
 
             <div className="flex items-center justify-center">
-                <div className="border border-gray-400 mt-8 p-10 flex flex-col md:flex-row items-center gap-20 bg-gray-400 bg-opacity-20">
+                <div className="border border-textColor mt-8 p-10 flex flex-col md:flex-row items-center gap-20 bg-gray-400 bg-opacity-20">
                     <div className="flex flex-col gap-8">
                         {
                             contactInfos.map((info, index) => (
@@ -53,7 +53,7 @@ export function Contact() {
                                         {info.icon}
                                     </div>
 
-                                    <div className="flex flex-col items-start text-white">
+                                    <div className="flex flex-col items-start text-titleColor">
                                         <span className="font-bold text-lg">
                                             {info.field}
                                         </span>
@@ -67,7 +67,7 @@ export function Contact() {
 
                         <Link
                             href="mailto:ederbiason.eh@hotmail.com"
-                            className="mt-3 flex w-fit gap-2 p-5 text-white text-lg bg-customPurple bg-opacity-75 items-center font-bold group hover:bg-opacity-60"
+                            className="mt-3 flex w-fit gap-2 p-5 text-titleColor text-lg bg-customPurple bg-opacity-75 items-center font-bold group hover:bg-opacity-60"
                         >
                             {t("contact.contactButton")}
                             <BiSend size={24} className="transition-all duration-300 group-hover:translate-x-1" />

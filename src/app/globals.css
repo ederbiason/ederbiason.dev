@@ -3,9 +3,22 @@
 @tailwind utilities;
 
 :root {
-  background-color: #282C33;
+  --background: #F4F4F6;
+  --text-title: #1E1E1E;
+  --text-color: #6B7280;
+  --border-color: #6B7280;
+}
+
+body.dark-theme {
+  --background: #282C33;
+  --text-title: #ffffff;
+  --text-color: #9CA3AF;
+  --border-color: #9CA3AF;
+}
+
+body {
+  background-color: var(--background);
   padding: 0;
   margin: 0;
   display: block;
 }
-
