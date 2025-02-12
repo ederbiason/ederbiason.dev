@@ -104,7 +104,7 @@ export function Portfolio() {
                                         {
                                             project.tags.map((tag, index) => (
                                                 <div
-                                                    key={index}
+                                                    key={`${tag}-${index}`}
                                                     className="transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 text-titleColor bg-customPurple bg-opacity-30 w-fit px-2 p-1 rounded-full font-medium hover:shadow-md hover:shadow-gray-500 hover:bg-opacity-60 cursor-pointer text-sm"
                                                 >
                                                     <span>
@@ -118,7 +118,7 @@ export function Portfolio() {
                                     <div className="border-t-2 border-textColor p-5 bg-background flex flex-col gap-5">
                                         <div className="flex gap-3">
                                             <div className="text-customPurple text-2xl">
-                                                {projectIcons[index]}
+                                                {projectIcons[index % projectIcons.length]}
                                             </div>
                                             <h1 className="text-titleColor font-semibold text-xl">
                                                 {project.title}
