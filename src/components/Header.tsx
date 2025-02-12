@@ -89,7 +89,7 @@ export function Header() {
                     </div>
                 </div>
 
-                <Link href="#" className="text-titleColor text-bold text-sm md:text-base lg:text-lg">
+                <Link href="#home" className="text-titleColor text-bold text-sm md:text-base lg:text-lg">
                     <span className="text-customPurple">&#60;</span>Eder Biason <span className="text-customPurple">/&#62;</span>
                 </Link>
 
@@ -103,7 +103,7 @@ export function Header() {
                                 <Link
                                     href={item.href}
                                     className={`flex flex-col md:flex-row items-center gap-2 transition-colors ${activeSection === item.href.slice(1)
-                                        ? "font-bold text-titleColor"
+                                        ? "font-bold text-white md:text-titleColor"
                                         : "hover:text-titleColor"
                                         }`}
                                     onClick={() => {
@@ -136,17 +136,17 @@ export function Header() {
                             </button>
                             {isLangMenuOpen && (
                                 <div
-                                    className="absolute top-8 left-0 bg-zinc-700 text-sm rounded-lg shadow-lg py-2"
+                                    className="absolute -top-24 -left-1/3 bg-zinc-700 text-sm rounded-lg shadow-lg py-2"
                                     onMouseLeave={() => setIsLangMenuOpen(false)}
                                 >
                                     <button
-                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "pt" && "text-titleColor"}`}
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "pt" && "text-white"}`}
                                         onClick={() => changeLanguage("pt")}
                                     >
                                         {activeLanguage === "pt" ? "Português" : "Portuguese"}
                                     </button>
                                     <button
-                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "en" && "text-titleColor"}`}
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "en" && "text-white"}`}
                                         onClick={() => changeLanguage("en")}
                                     >
                                         {activeLanguage === "pt" ? "Inglês" : "English"}
@@ -184,6 +184,11 @@ export function Header() {
                     <button
                         onClick={() => {
                             setIsDarkMode(!isDarkMode)
+                            document.body.classList.toggle("dark-theme")
+                            localStorage.setItem(
+                                "theme",
+                                isDarkMode ? "light" : "dark"
+                            )
                         }}
                         className="text-xl"
                     >
