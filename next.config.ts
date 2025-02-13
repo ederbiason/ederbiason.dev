@@ -9,6 +9,8 @@ const i18nConfig: UserConfig = {
 }
 
 const nextConfig: NextConfig = {
+  output: "standalone", 
+  trailingSlash: false,
   devIndicators: {
     appIsrStatus: false,
   },
