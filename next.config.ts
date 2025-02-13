@@ -9,7 +9,6 @@ const i18nConfig: UserConfig = {
 }
 
 const nextConfig: NextConfig = {
-  output: "export", 
   trailingSlash: true,
   devIndicators: {
     appIsrStatus: false,
