@@ -9,8 +9,8 @@ const i18nConfig: UserConfig = {
 }
 
 const nextConfig: NextConfig = {
-  output: "standalone", 
-  trailingSlash: false,
+  output: "export", 
+  trailingSlash: true,
   devIndicators: {
     appIsrStatus: false,
   },
