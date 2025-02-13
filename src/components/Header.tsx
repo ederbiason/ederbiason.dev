@@ -136,7 +136,7 @@ export function Header() {
                             </button>
                             {isLangMenuOpen && (
                                 <div
-                                    className="absolute -top-24 -left-1/3 bg-zinc-700 text-sm rounded-lg shadow-lg py-2"
+                                    className="absolute -top-24 -left-1/3 md:top-8 md:left-0 bg-zinc-700 text-sm rounded-lg shadow-lg py-2"
                                     onMouseLeave={() => setIsLangMenuOpen(false)}
                                 >
                                     <button
