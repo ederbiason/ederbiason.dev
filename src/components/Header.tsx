@@ -94,8 +94,8 @@ export function Header() {
                 </Link>
 
                 <div
-                    className={`fixed md:static md:w-fit bottom-0 left-0 bg-zinc-800 rounded-t-3xl text-textColor w-full h-fit flex flex-col p-6 pb-3 transform transition-transform ${isMenuOpen ? "translate-y-0" : "translate-y-full md:translate-y-0"
-                        } md:bottom-auto md:left-auto md:flex md:items-center md:bg-transparent md:p-0`}
+                    className={`fixed md:static md:w-fit bottom-0 left-0 bg-background shadow-[0px_-4px_10px_rgba(0,0,0,0.3)] rounded-t-3xl text-textColor w-full h-fit flex flex-col p-6 pb-3 transform transition-transform ${isMenuOpen ? "translate-y-0" : "translate-y-full md:translate-y-0"
+                        } md:bottom-auto md:left-auto md:flex md:items-center md:shadow-none md:p-0`}
                 >
                     <ul className="grid grid-cols-3 px-10 py-5 justify-items-center md:flex md:px-0 md:py-0 gap-14 md:gap-5 lg:gap-10">
                         {menuItems.map((item) => (
@@ -103,7 +103,7 @@ export function Header() {
                                 <Link
                                     href={item.href}
                                     className={`flex flex-col md:flex-row items-center gap-2 transition-colors ${activeSection === item.href.slice(1)
-                                        ? "font-bold text-white md:text-titleColor"
+                                        ? "font-bold text-titleColor md:text-titleColor"
                                         : "hover:text-titleColor"
                                         }`}
                                     onClick={() => {
@@ -136,17 +136,17 @@ export function Header() {
                             </button>
                             {isLangMenuOpen && (
                                 <div
-                                    className="absolute -top-24 -left-1/3 md:top-8 md:left-0 bg-zinc-700 text-sm rounded-lg shadow-lg py-2"
+                                    className="absolute -top-24 -left-1/3 md:top-8 md:left-0 bg-background border border-borderColor text-sm rounded-lg shadow-lg py-2"
                                     onMouseLeave={() => setIsLangMenuOpen(false)}
                                 >
                                     <button
-                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "pt" && "text-white"}`}
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 hover:bg-opacity-30 ${activeLanguage === "pt" && "text-titleColor font-bold"}`}
                                         onClick={() => changeLanguage("pt")}
                                     >
                                         {activeLanguage === "pt" ? "Português" : "Portuguese"}
                                     </button>
                                     <button
-                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 ${activeLanguage === "en" && "text-white"}`}
+                                        className={`block w-full px-4 py-2 hover:bg-zinc-600 hover:bg-opacity-30 ${activeLanguage === "en" && "text-titleColor font-bold"}`}
                                         onClick={() => changeLanguage("en")}
                                     >
                                         {activeLanguage === "pt" ? "Inglês" : "English"}

@@ -160,7 +160,7 @@
                 "title": "Portfólio",
                 "image": "/images/projects/portfolio.png",
                 "linkGithub": "https://github.com/ederbiason/ederbiason.dev",
-                "linkDeploy": "",
+                "linkDeploy": "https://ederbiason-dev.vercel.app/",
                 "tags": [
                     "NextJS",
                     "React",
