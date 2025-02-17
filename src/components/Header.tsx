@@ -128,11 +128,11 @@ export function Header() {
                                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                             >
                                 <FaGlobe className="md:hidden" />
-                                <p className="md:flex group-hover:text-titleColor">
+                                <p className={`md:flex group-hover:text-titleColor ${isLangMenuOpen ? "text-titleColor" : ""}`}>
                                     <span className="hidden md:block text-customPurple">#</span>
                                     {activeLanguage === "pt" ? "idiomas" : "languages"}
                                 </p>
-                                <FaAngleDown className="hidden md:block group-hover:text-titleColor" />
+                                <FaAngleDown className={`hidden md:block group-hover:text-titleColor transition-all duration-300 ${isLangMenuOpen ? "rotate-180 text-titleColor" : ""}`} />
                             </button>
                             {isLangMenuOpen && (
                                 <div
