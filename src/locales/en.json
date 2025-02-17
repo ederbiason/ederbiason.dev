@@ -81,12 +81,56 @@
             {
                 "title": "Developer Intern",
                 "subtitle": "Junior Baby",
-                "dateRange": "Feb 2024 - Dec 2024"
+                "dateRange": "Feb 2024 - Dec 2024",
+                "responsibilities": {
+                    "title": "Responsabilities",
+                    "tasks": [
+                        "Full-stack development of the e-commerce platform using Next.js, React.js, and Node.js",
+                        "Developed an inventory management system for efficient control of products, customers, and orders",
+                        "Implemented Stripe payment API for secure checkout",
+                        "Direct collaboration with stakeholders to gather requirements and ensure the platform aligns with the business model"
+                    ]
+                },
+                "technologies": {
+                    "title": "Technologies",
+                    "tools": [
+                        "NextJS",
+                        "NodeJS",
+                        "ReactJS",
+                        "TypeScript",
+                        "MongoDB",
+                        "TailwindCSS",
+                        "Firebase",
+                        "Stripe",
+                        "ShadcnUI"
+                    ]
+                }
             },
             {
                 "title": "Curricular Extension Project",
                 "subtitle": "UniFil",
-                "dateRange": "Jun 2023 - Jul 2024"
+                "dateRange": "Jun 2023 - Jul 2024",
+                "responsibilities": {
+                    "title": "Responsabilities",
+                    "tasks": [
+                        "Implemented an informational tab for disease consultation, serving as a 'disease handbook'",
+                        "Developed an interactive chatbot for pre-diagnosis suggestions based on user-provided symptoms",
+                        "Integrated an interactive map displaying nearby medical care facilities based on the user's location"
+                    ]
+                },
+                "technologies": {
+                    "title": "Technologies",
+                    "tools": [
+                        "ReactJS",
+                        "NodeJS",
+                        "TypeScript",
+                        "ViteJS",
+                        "TailwindCSS",
+                        "Firebase",
+                        "Oracle Cloud",
+                        "Leaflet"
+                    ]
+                }
             }
         ]
     },

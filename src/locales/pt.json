@@ -81,12 +81,56 @@
             {
                 "title": "Estagiário Desenvolvedor",
                 "subtitle": "Junior Baby",
-                "dateRange": "Fev 2024 - Dez 2024"
+                "dateRange": "Fev 2024 - Dez 2024",
+                "responsibilities": {
+                    "title": "Reponsabilidades",
+                    "tasks": [
+                        "Desenvolvimento full-stack da plataforma de e-commerce utilizando Next.js, React.js e Node.js",
+                        "Desenvolvido um sistema de gerenciamento de estoque para controle eficiente de produtos, clientes e pedidos",
+                        "Implementação de API de pagamento Stripe para checkout seguro",
+                        "Colaboração direta com stakeholders para levantamento de requisitos e garantia da adequação da plataforma ao modelo de negócio"
+                    ]
+                },
+                "technologies": {
+                    "title": "Tecnologias",
+                    "tools": [
+                        "NextJS",
+                        "NodeJS",
+                        "ReactJS",
+                        "TypeScript",
+                        "MongoDB",
+                        "TailwindCSS",
+                        "Firebase",
+                        "Stripe",
+                        "ShadcnUI"
+                    ]
+                }
             },
             {
                 "title": "Projeto de Extensão Curricular",
                 "subtitle": "UniFil",
-                "dateRange": "Jun 2023 - Jul 2024"
+                "dateRange": "Jun 2023 - Jul 2024",
+                "responsibilities": {
+                    "title": "Reponsabilidades",
+                    "tasks": [
+                        "Implementação de aba informativa para consulta de doenças, servindo como 'cartilha de doenças'",
+                        "Desenvolvimento de chatbot interativo para sugestão de pré-diagnósticos com base nos sintomas informados pelo usuário",
+                        "Integração com API de notícias e mapa interativo exibindo pontos de atendimento médico próximos à localização do usuário"
+                    ]
+                },
+                "technologies": {
+                    "title": "Tecnologias",
+                    "tools": [
+                        "ReactJS",
+                        "NodeJS",
+                        "TypeScript",
+                        "ViteJS",
+                        "TailwindCSS",
+                        "Firebase",
+                        "Oracle Cloud",
+                        "Leaflet"
+                    ]
+                }
             }
         ]
     },

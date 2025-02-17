@@ -1,11 +1,22 @@
 "use client"
 
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import { FaArrowRight } from "react-icons/fa"
+import { IoIosCloseCircleOutline } from "react-icons/io"
 
 type Experience = {
     title: string
     subtitle: string
     dateRange: string
+    responsibilities: {
+        title: string
+        tasks: string[]
+    }
+    technologies: {
+        title: string
+        tools: string[]
+    }
 }
 
 type Education = {
@@ -16,6 +27,8 @@ type Education = {
 
 
 export function Qualification() {
+    const [activeModal, setActiveModal] = useState<number | null>(null)
+
     const { t } = useTranslation()
 
     const tabs = t("qualification.tab", { returnObjects: true }) as { title: string }[]
@@ -89,15 +102,78 @@ export function Qualification() {
                                     <p className="text-customPurple">
                                         {experience.subtitle}
                                     </p>
-                                    <p className="text-textColor">
+                                    <p className="text-textColor pb-1 md:pb-0">
                                         {experience.dateRange}
                                     </p>
+
+                                    <button
+                                        className="group text-customPurple flex items-center gap-1 absolute bottom-1 right-2.5 underline underline-offset-4 hover:text-titleColor"
+                                        onClick={() => setActiveModal(index)}
+                                    >
+                                        ver mais
+                                        <FaArrowRight size={14} className="transition-all duration-300 group-hover:translate-x-1" />
+                                    </button>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </div>
+
+            {experiences.map((experience, index) => (
+                <div
+                    key={index}
+                    className={`fixed px-4 md:px-0 z-50 inset-0 bg-black bg-opacity-50 flex items-center justify-center transition-opacity duration-300 ${
+                        activeModal === index ? "opacity-100 scale-100" : "opacity-0 pointer-events-none"
+                    }`}
+                >
+                    <div className="relative bg-background rounded-md p-6 w-[500px] transition-transform duration-300">
+                        <IoIosCloseCircleOutline
+                            size={30}
+                            className="absolute top-3 right-3 cursor-pointer text-customPurple hover:text-white hover:bg-customPurple rounded-full"
+                            onClick={() => setActiveModal(null)}
+                        />
+
+                        <h1 className="font-bold text-2xl text-titleColor">
+                            {experience.title}
+                        </h1>
+
+                        <p className="text-customPurple font-semibold">
+                            {experience.subtitle} | {experience.dateRange}
+                        </p>
+
+                        <ul className="text-textColor list-disc p-5">
+                            {
+                                experience.responsibilities.tasks.map((responsability, index) => (
+                                    <li key={index}>
+                                        {responsability}
+                                    </li>
+                                ))
+                            }
+                        </ul>
+
+                        <div>
+                            <p className="text-titleColor font-semibold">
+                                {experience.technologies.title}
+                            </p>
+                            <div className="pt-3 flex flex-wrap gap-3 bg-background">
+                                {
+                                    experience.technologies.tools.map((tool, index) => (
+                                        <div
+                                            key={`${tool}-${index}`}
+                                            className="transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 text-titleColor bg-customPurple bg-opacity-30 w-fit px-2 p-1 rounded-full font-medium hover:shadow-md hover:shadow-gray-500 hover:bg-opacity-60 cursor-pointer text-sm"
+                                        >
+                                            <span>
+                                                {tool}
+                                            </span>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
         </section>
     )
 }
