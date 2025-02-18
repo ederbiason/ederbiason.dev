@@ -57,6 +57,7 @@
     "qualification": {
         "title": "qualificação",
         "subtitle": "Minha escolaridade e experiências de trabalho até o momento",
+        "seeMore": "ver mais",
         "tab": [
             {
                 "title": "Educação"
@@ -137,6 +138,7 @@
     "portfolio": {
         "title": "portfólio",
         "subtitle": "Projetos concluídos e detalhes sobre cada sistema",
+        "seeMore": "ver mais",
         "projects": [
             {
                 "title": "Poop Party",

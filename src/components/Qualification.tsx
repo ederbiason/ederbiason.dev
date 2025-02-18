@@ -110,7 +110,7 @@ export function Qualification() {
                                         className="group text-customPurple flex items-center gap-1 absolute bottom-1 right-2.5 underline underline-offset-4 hover:text-titleColor"
                                         onClick={() => setActiveModal(index)}
                                     >
-                                        ver mais
+                                        {t("qualification.seeMore")}
                                         <FaArrowRight size={14} className="transition-all duration-300 group-hover:translate-x-1" />
                                     </button>
                                 </div>
