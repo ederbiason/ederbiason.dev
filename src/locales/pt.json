@@ -164,7 +164,7 @@
                 "title": "E-commerce Junior Baby",
                 "image": "/images/projects/ecommerce.png",
                 "linkGithub": "https://github.com/ederbiason/ecommerce-juniorbaby",
-                "linkDeploy": "",
+                "linkDeploy": "https://ecommerce-juniorbaby.vercel.app/",
                 "tags": [
                     "NextJS",
                     "React",
@@ -185,7 +185,7 @@
                 "title": "Saúde in Foco",
                 "image": "/images/projects/saude-in-foco.png",
                 "linkGithub": "https://github.com/ederbiason/saude-in-foco",
-                "linkDeploy": "http://144.22.160.181:3000/",
+                "linkDeploy": "https://saude-in-foco.vercel.app/",
                 "tags": [
                     "React",
                     "NodeJS",
