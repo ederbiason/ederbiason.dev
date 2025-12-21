@@ -70,7 +70,7 @@
             {
                 "title": "Engenharia de Software",
                 "subtitle": "UniFil",
-                "dateRange": "Jul 2022 - Jul 2026"
+                "dateRange": "Jul 2022 - Dez 2025"
             },
             {
                 "title": "Engenharia de Produção - Software",
@@ -79,6 +79,57 @@
             }
         ],
         "experiences": [
+            {
+                "title": "Analista de Tecnologia da Informação",
+                "subtitle": "Tata Consultancy Services do Brasil Ltda",
+                "dateRange": "Nov 2025 - Atualmente",
+                "responsibilities": {
+                    "title": "Responsabilidades",
+                    "tasks": [
+                        "Desenvolvimento e manutenção de aplicações corporativas utilizando OutSystems (O11) em ambiente produtivo",
+                        "Implementação de novas funcionalidades, integrações REST e ajustes em módulos existentes",
+                        "Criação e execução de testes unitários, revisão de código e aplicação de boas práticas de arquitetura low-code",
+                        "Atuação em time ágil, participando de dailies, plannings, refinements e cerimônias de sprint"
+                    ]
+                },
+                "technologies": {
+                    "title": "Tecnologias",
+                    "tools": [
+                        "OutSystems",
+                        "Low-Code",
+                        "O11",
+                        "API REST",
+                        "Testes Unitários",
+                        "Agile"
+                    ]
+                }
+            },
+            {
+                "title": "Estagiário de Desenvolvimento Low-Code",
+                "subtitle": "Tata Consultancy Services do Brasil Ltda",
+                "dateRange": "Mai 2025 - Nov 2025",
+                "responsibilities": {
+                    "title": "Responsabilidades",
+                    "tasks": [
+                        "Capacitação prática em plataformas low-code como OutSystems (O11 e ODC) e Mendix",
+                        "Desenvolvimento de aplicações como sistemas de estoque, farmácia e gestão de filiais",
+                        "Integração e exposição de APIs REST, criação de testes unitários e implementação de controle de permissões"
+                    ]
+                },
+                "technologies": {
+                    "title": "Tecnologias",
+                    "tools": [
+                        "OutSystems",
+                        "Mendix",
+                        "Low-Code",
+                        "O11",
+                        "ODC",
+                        "API REST",
+                        "Testes Unitários",
+                        "Agile"
+                    ]
+                }
+            },
             {
                 "title": "Estagiário Desenvolvedor",
                 "subtitle": "Junior Baby",

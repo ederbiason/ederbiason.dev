@@ -71,7 +71,7 @@ export function Home() {
                     />
 
                     <div className="border border-textColor border-t-transparent flex items-center p-2 gap-3 w-fit">
-                        <div className="w-4 h-4 border border-customPurple bg-customPurple bg-opacity-20" />
+                        <div className="w-4 h-4 border border-customPurple bg-customPurple animate-pulse" />
                         <p className="text-textColor">
                             {t("home.imageTitle")}
                         </p>

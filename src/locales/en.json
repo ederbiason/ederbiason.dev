@@ -70,7 +70,7 @@
             {
                 "title": "Software Engineering",
                 "subtitle": "UniFil",
-                "dateRange": "Jul 2022 - Jul 2026"
+                "dateRange": "Jul 2022 - Dec 2025"
             },
             {
                 "title": "Production Engineering - Software",
@@ -79,6 +79,57 @@
             }
         ],
         "experiences": [
+            {
+                "title": "Information Technology Analyst",
+                "subtitle": "Tata Consultancy Services Brazil Ltda",
+                "dateRange": "Nov 2025 - Present",
+                "responsibilities": {
+                    "title": "Responsibilities",
+                    "tasks": [
+                        "Development and maintenance of corporate applications using OutSystems (O11) in a production environment",
+                        "Implementation of new features, REST integrations, and enhancements to existing modules",
+                        "Creation and execution of unit tests, code reviews, and application of low-code architecture best practices",
+                        "Active participation in agile teams, including dailies, plannings, refinements, and sprint ceremonies"
+                    ]
+                },
+                "technologies": {
+                    "title": "Technologies",
+                    "tools": [
+                        "OutSystems",
+                        "Low-Code",
+                        "O11",
+                        "REST API",
+                        "Unit Testing",
+                        "Agile"
+                    ]
+                }
+            },
+            {
+                "title": "Low-Code Development Intern",
+                "subtitle": "Tata Consultancy Services Brazil Ltda",
+                "dateRange": "May 2025 - Nov 2025",
+                "responsibilities": {
+                    "title": "Responsibilities",
+                    "tasks": [
+                        "Hands-on training in low-code platforms such as OutSystems (O11 and ODC) and Mendix",
+                        "Development of applications including inventory systems, pharmacy systems, and branch management solutions",
+                        "Integration and exposure of REST APIs, implementation of unit tests, and permission control mechanisms"
+                    ]
+                },
+                "technologies": {
+                    "title": "Technologies",
+                    "tools": [
+                        "OutSystems",
+                        "Mendix",
+                        "Low-Code",
+                        "O11",
+                        "ODC",
+                        "REST API",
+                        "Unit Testing",
+                        "Agile"
+                    ]
+                }
+            },
             {
                 "title": "Developer Intern",
                 "subtitle": "Junior Baby",
